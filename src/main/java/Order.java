@@ -22,5 +22,10 @@ public class Order {
             resultList.add(lists.get(listsIndexMap.get(i + 1)));
         }
         return String.join(" ", resultList);
+
+        // Best Practices
+//        return Arrays.stream(words.split(" "))
+//                .sorted(Comparator.comparing(s -> Integer.valueOf(s.replaceAll("\\D", ""))))
+//                .reduce((a, b) -> a + " " + b).get();
     }
 }
