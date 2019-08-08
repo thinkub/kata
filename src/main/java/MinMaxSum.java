@@ -23,10 +23,16 @@ public class MinMaxSum {
         long maxResult = arrs.stream().filter(a -> !a.equals(minValue)).mapToLong(Integer::intValue).sum();
         long minResult = arrs.stream().filter(a -> !a.equals(maxValue)).mapToLong(Integer::intValue).sum();
 
-        System.out.printf("%d %d", minResult, maxResult);
+        if (isSaleValueArrs(minResult, maxResult)) {
+            long result = arrs.stream().mapToLong(Integer::valueOf).sum() - arrs.get(0);
+            System.out.printf("%d %d", result, result);
+        } else {
+            System.out.printf("%d %d", minResult, maxResult);
+        }
+    }
 
-
-
+    private static boolean isSaleValueArrs(long minResult, long maxResult) {
+        return minResult == 0 && maxResult == 0;
     }
     private static final Scanner scanner = new Scanner(System.in);
 

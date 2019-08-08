@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class MinMaxSumTest {
     @Test
     public void miniMaxSum() {
-        int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = {5, 5, 5, 5, 5};
         MinMaxSum.miniMaxSum(arr);
     }
 }
